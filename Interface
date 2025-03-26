@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning & Development Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Cool gradient background */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full viewport height */
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.3); /* Semi-transparent header */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #e0f7fa; /* Light cyan for header text */
+        }
+
+        .content {
+            flex: 1; /* Allow content to grow and fill remaining space */
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .module {
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent module boxes */
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .module:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .module h2 {
+            margin-bottom: 15px;
+            color: #b2ebf2; /* Light blue for module titles */
+        }
+
+        .module p {
+            color: #cce0e5; /* Light grey for module descriptions */
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            color: #bdbdbd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Learning & Development Hub</h1>
+    </header>
+
+    <div class="content">
+        <div class="module-grid">
+            <div class="module">
+                <h2>Python Basics</h2>
+                <p>Learn the fundamental concepts of Python programming.</p>
+            </div>
+            <div class="module">
+                <h2>Data Science with Pandas</h2>
+                <p>Explore data manipulation and analysis using Pandas.</p>
+            </div>
+            <div class="module">
+                <h2>Web Development with React</h2>
+                <p>Build interactive web applications with React.js.</p>
+            </div>
+            <div class="module">
+                <h2>SQL for Data Analysis</h2>
+                <p>Master SQL queries for data extraction and analysis.</p>
+            </div>
+            <div class="module">
+                <h2>Machine Learning Fundamentals</h2>
+                <p>Introduction to machine learning algorithms and concepts.</p>
+            </div>
+            <div class="module">
+                <h2>Cloud Computing with AWS</h2>
+                <p>Learn the basics of cloud services on Amazon Web Services.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Learning & Development Platform</p>
+    </footer>
+
+</body>
+</html>
