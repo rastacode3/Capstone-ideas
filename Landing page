@@ -1,0 +1,198 @@
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { motion } from 'framer-motion';
+import { Cpu, Award, Flag, CheckCircle, Database, Cloud, BrainCircuit, Book } from 'lucide-react';
+
+// Animation variants
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.3, // Stagger the appearance of children
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+    },
+};
+
+const CloudAIDataCredentialsAndGoalsPage = () => {
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black p-4 md:p-8">
+            <div className="max-w-4xl mx-auto space-y-8">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: 'easeInOut' }}
+                    className="text-center"
+                >
+                    <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                        Welcome back Nick
+                    </h1>
+                    <p className="text-gray-400 text-lg mt-4">
+                        BCW - Specialising in cutting edge technologies.
+                    </p>
+                </motion.div>
+
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="space-y-6"
+                >
+                    <motion.div variants={itemVariants}>
+                        <Card className="bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl hover:shadow-purple-500/20 transition-all duration-300">
+                            <CardHeader>
+                                <CardTitle className="text-2xl font-semibold text-white flex items-center gap-2">
+                                    <Award className="w-6 h-6 text-yellow-400" />
+                                    Credentials & Certifications
+                                </CardTitle>
+                                <CardDescription className="text-gray-300">
+                                    My qualifications in Cloud, AI, and Data Science.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <div className="space-y-2">
+                                    <Badge
+                                        variant="secondary"
+                                        className="bg-blue-500/20 text-blue-300 border-blue-500/30 flex items-center"
+                                    >
+                                        <Cloud className="w-4 h-4 mr-1" />
+                                        AWS Certified Cloud Practitioner
+                                    </Badge>
+                                    <Badge
+                                        variant="secondary"
+                                        className="bg-purple-500/20 text-purple-300 border-purple-500/30 flex items-center"
+                                    >
+                                        <BrainCircuit className="w-4 h-4 mr-1" />
+                                        TensorFlow Certified Developer
+                                    </Badge>
+                                    <Badge
+                                        variant="secondary"
+                                        className="bg-green-500/20 text-green-300 border-green-500/30 flex items-center"
+                                    >
+                                        <Database className="w-4 h-4 mr-1" />
+                                        Google Data Analytics Professional Certificate
+                                    </Badge>
+                                    <Badge
+                                        variant="secondary"
+                                        className="bg-pink-500/20 text-pink-300 border-pink-500/30 flex items-center"
+                                      >
+                                        <CheckCircle className="w-4 h-4 mr-1" />
+                                        Microsoft Certified: Azure AI Engineer Associate
+                                    </Badge>
+                                    {/* Add more credentials/certifications as needed */}
+                                </div>
+                                <p className="text-gray-400 text-sm">
+                                    These credentials demonstrate my expertise in Cloud Computing, Artificial
+                                    Intelligence, and Data Science.
+                                </p>
+                            </CardContent>
+                        </Card>
+                    </motion.div>
+
+                    <motion.div variants={itemVariants}>
+                        <Card className="bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl hover:shadow-purple-500/20 transition-all duration-300">
+                            <CardHeader>
+                                <CardTitle className="text-2xl font-semibold text-white flex items-center gap-2">
+                                    <Flag className="w-6 h-6 text-green-400" />
+                                    Annual Goals
+                                </CardTitle>
+                                <CardDescription className="text-gray-300">
+                                    My objectives for the year in Cloud, AI, and Data.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <ul className="list-disc list-inside space-y-2 text-gray-400">
+                                    <li>Achieve AWS Solutions Architect Professional Certification.</li>
+                                    <li>Develop and deploy a machine learning model to production.</li>
+                                    <li>Master a new data visualization tool.</li>
+                                    <li>Contribute to an open-source AI project.</li>
+                                    <li>Present research findings at a tech conference.</li>
+                                </ul>
+                                <p className="text-gray-400 text-sm">
+                                    These goals are focused on advancing my skills and contributing to the
+                                    fields of Cloud, AI, and Data Science.
+                                </p>
+                            </CardContent>
+                        </Card>
+                    </motion.div>
+
+                    <motion.div variants={itemVariants}>
+                        <Card className="bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl hover:shadow-purple-500/20 transition-all duration-300">
+                            <CardHeader>
+                                <CardTitle className="text-2xl font-semibold text-white flex items-center gap-2">
+                                     <Cpu className="w-6 h-6 text-red-400" />
+                                    Targets
+                                </CardTitle>
+                                <CardDescription className="text-gray-300">
+                                    Specific targets for Cloud, AI, and Data initiatives.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <ul className="list-disc list-inside space-y-2 text-gray-400">
+                                    <li>Complete the AWS certification by Q2.</li>
+                                    <li>Deploy the ML model with 95% accuracy.</li>
+                                    <li>Become proficient in the data visualization tool within 6 months.</li>
+                                    <li>Submit 5 pull requests to the open-source project.</li>
+                                    <li>Get accepted to present at the conference.</li>
+                                </ul>
+                                <p className="text-gray-400 text-sm">
+                                    These targets provide clear, measurable outcomes for my goals in these
+                                    specialized areas.
+                                </p>
+                            </CardContent>
+                        </Card>
+                    </motion.div>
+                    <motion.div variants={itemVariants}>
+                        <Card className="bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl hover:shadow-purple-500/20 transition-all duration-300">
+                            <CardHeader>
+                                <CardTitle className="text-2xl font-semibold text-white flex items-center gap-2">
+                                    <Book className="w-6 h-6 text-blue-400" />
+                                    Learning and Development
+                                </CardTitle>
+                                <CardDescription className="text-gray-300">
+                                    Resources for continuous learning.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <ul className="list-disc list-inside space-y-2 text-gray-400">
+                                    <li><a href="hhttps://cloud.google.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Coursera</a></li>
+                                    <li><a href="https://www.udacity.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Udacity</a></li>
+                                    <li><a href="https://www.edx.org/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">edX</a></li>
+                                    <li><a href="https://aws.amazon.com/training/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">AWS Training and Certification</a></li>
+                                    <li><a href="https://cloud.google.com/training" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Google Cloud Training</a></li>
+                                </ul>
+                                <p className="text-gray-400 text-sm">
+                                    These resources help me stay updated with the latest trends and technologies
+                                    in Cloud, AI, and Data Science.
+                                </p>
+                            </CardContent>
+                        </Card>
+                    </motion.div>
+                </motion.div>
+                 <div className="text-center mt-8">
+                    <Button
+                        as="a"
+                        href="/" // Link back to the main page
+                        className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full
+                                   hover:from-purple-600 hover:to-blue-600 hover:scale-105 transition-all duration-300
+                                   shadow-lg hover:shadow-purple-500/30 font-semibold text-lg"
+                    >
+                        ← Back to Home
+                    </Button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default CloudAIDataCredentialsAndGoalsPage;
